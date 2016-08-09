@@ -1,0 +1,10 @@
+<h3>These are all the restaurants in Brussels</h3>
+
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <li>
+      <%= link_to restaurant.name, restaurant_path(restaurant) %> | <%= restaurant.stars %> stars
+      <%= link_to 'Remove', restaurant_path(restaurant), method: :delete, data: { confirm: 'Are you sure bro?'} %>
+    </li>
+  <% end %>
+</ul>

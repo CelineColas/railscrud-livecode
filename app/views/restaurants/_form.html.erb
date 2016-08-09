@@ -1,0 +1,24 @@
+<%= form_for(@restaurant) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+
+  <%= f.submit %>
+<% end %>
+
+<%# form_for is just generating plain HTML forms so
+    we don't have to write them, e.g. %>
+
+<!-- 
+<form action='/restaurants' method='post'>
+  < form stuff ... >
+</form>
+-->
+
+<!-- 
+<form action='/restaurants/1' method='put'>
+  < form stuff ... >
+</form>
+ -->
